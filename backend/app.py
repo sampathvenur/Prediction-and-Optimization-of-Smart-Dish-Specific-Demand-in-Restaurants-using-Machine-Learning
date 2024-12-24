@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import numpy as np
 import pandas as pd
 from tensorflow.keras.models import load_model
@@ -6,8 +7,7 @@ from utils.preprocessing import preprocess_data
 
 app = Flask(__name__)
 
-# Load the model once at startup
-model = load_model('models/zomato_demand_model.keras')
+CORS(app)
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -16,6 +16,9 @@ def predict():
         return jsonify({"error": "No input data provided"}), 400
 
     try:
+        # Load the model inside the function for each request
+        model = load_model('zomato_demand_model.keras')
+        
         # Preprocess the data
         processed_data = preprocess_data(data)
 
@@ -26,7 +29,13 @@ def predict():
         return jsonify({"predicted_votes": predicted_votes}), 200
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        # Log the error for debugging
+        app.logger.error(f"Error during prediction: {str(e)}")
+        return jsonify({"error": "An error occurred while processing your request. Please try again."}), 500
+
+@app.route('/')
+def home():
+    return "Welcome to the Zomato Demand Predictor API"
 
 if __name__ == '__main__':
     app.run(debug=True)
