@@ -1,0 +1,6 @@
+Model Evaluation on Validation Set:
+Mean Absolute Error (MAE): 194.35814611444079
+Root Mean Squared Error (RMSE): 339.2426479106249
+R-squared (R2): 0.24550610267294026
+
+Test predictions saved to ../results/test_predictions.csv
