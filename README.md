@@ -1,4 +1,3 @@
-
 # Prediction and Optimization of Smart Dish-Specific Demand in Restaurants
 
 This project aims to address the challenges of predicting restaurant dish demand and optimizing inventory management. By leveraging machine learning models and a user-friendly web application, restaurant managers can minimize waste and improve operational efficiency.
@@ -12,7 +11,6 @@ This project aims to address the challenges of predicting restaurant dish demand
 - [Technologies Used](#technologies-used)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -41,8 +39,8 @@ The project focuses on predicting weekly demand for individual dishes in restaur
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/repository-name.git
-   cd repository-name
+   https://github.com/sampathvenur/Prediction-and-Optimization-of-Smart-Dish-Specific-Demand-in-Restaurants-using-Machine-Learning.git
+   cd Prediction-and-Optimization-of-Smart-Dish-Specific-Demand-in-Restaurants-using-Machine-Learning
    ```
 2. Install the required libraries:
    ```bash
