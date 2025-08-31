@@ -1,4 +1,4 @@
-# Prediction and Optimization of Smart Dish-Specific Demand in Restaurants
+# Prediction and Optimization of Smart Dish-Specific Demand in Restaurant
 
 This project aims to address the challenges of predicting restaurant dish demand and optimizing inventory management. By leveraging machine learning models and a user-friendly web application, restaurant managers can minimize waste and improve operational efficiency.
 
